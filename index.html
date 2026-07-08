@@ -196,7 +196,29 @@ status: build passing ✓</pre>
       <p class="stage-sub">$ kubectl get deployments --namespace=projects</p>
 
       <div class="deploy-grid">
-       
+        <article class="deploy-card">
+  <div class="terminal-bar">
+    <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+    <span class="terminal-title">aws-stepfunctions-image-assembly/deploy.log</span>
+  </div>
+  <div class="deploy-body">
+    <div class="deploy-top">
+      <h3>Serverless Identity Verification Pipeline</h3>
+      <span class="status-pill status-pass">✓ passing</span>
+    </div>
+    <p class="deploy-date">2026</p>
+    <ul class="deploy-list">
+      <li>Built a fully serverless, event-driven image validation workflow on AWS — an S3 upload triggers EventBridge, which kicks off a Step Functions workflow that invokes Amazon Rekognition via Lambda to detect human faces.</li>
+      <li>Implemented a parallel decision state: face detected → thumbnail generation + DynamoDB metadata logging; no face → SNS email alert to developers, with all infrastructure deployed via CloudFormation (IaC).</li>
+      <li>Powered by three Lambda functions (face_detector.py, thumbnail_generator.py, metadata_logger.py) storing ImageID, confidence score, timestamp, and status per verified image.</li>
+    </ul>
+    <div class="chip-row">
+      <span class="chip">AWS Step Functions</span><span class="chip">Amazon Rekognition</span><span class="chip">Lambda</span><span class="chip">DynamoDB</span><span class="chip">SNS</span><span class="chip">EventBridge</span><span class="chip">CloudFormation</span>
+    </div>
+    <a href="https://github.com/GurjyotSingh740-gk/aws-stepfunctions-image-assembly" target="_blank" rel="noopener" class="deploy-link">View source →</a>
+  </div>
+</article>
+        
         <article class="deploy-card">
           <div class="terminal-bar">
             <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
@@ -242,6 +264,29 @@ status: build passing ✓</pre>
             <a href="https://github.com/GurjyotSingh740-gk/aws-edge-secured-static-site" target="_blank" rel="noopener" class="deploy-link">View source →</a>
           </div>
         </article>
+
+        <article class="deploy-card">
+  <div class="terminal-bar">
+    <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+    <span class="terminal-title">Snapshift-IoT-Major/deploy.log</span>
+  </div>
+  <div class="deploy-body">
+    <div class="deploy-top">
+      <h3>SnapShift — Gesture-Driven Cross-System File Transfer</h3>
+      <span class="status-pill status-pass">✓ passing</span>
+    </div>
+    <p class="deploy-date">IoT Major Project</p>
+    <ul class="deploy-list">
+      <li>Built an ESP32 + MPU9250 IMU wand that lets a user physically "grab" a window on one Windows PC, tilt-drag it across the screen, and wirelessly hand off the linked file to a second PC over Wi-Fi — no keyboard or mouse needed.</li>
+      <li>Implemented a UDP motion stream (gyro Y/Z at ~50 Hz with ±0.8°/s deadband noise filtering) from ESP32 to System 1, with TCP file streaming to System 2 in 4 KB chunks on edge-triggered release.</li>
+      <li>Built real-time Pygame overlays on both systems — a compact status bar on the sender (idle → moving → at-edge → uploading → sent) and a full-screen animated file card with progress bar on the receiver.</li>
+    </ul>
+    <div class="chip-row">
+      <span class="chip">ESP32</span><span class="chip">MPU9250</span><span class="chip">Python</span><span class="chip">Pygame</span><span class="chip">Wi-Fi UDP/TCP</span><span class="chip">pywin32</span>
+    </div>
+    <a href="https://github.com/GurjyotSingh740-gk/Snapshift-IoT-Major" target="_blank" rel="noopener" class="deploy-link">View source →</a>
+  </div>
+</article>
         
         <article class="deploy-card">
           <div class="terminal-bar">
