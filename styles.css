@@ -446,6 +446,55 @@ a { color: inherit; }
 }
 
 /* ============================================================
+   JOB TIMELINE (EXPERIENCE)
+   ============================================================ */
+.job-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+ 
+.job-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px 22px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+ 
+.job-card:hover {
+  border-color: var(--amber-dim);
+  transform: translateY(-2px);
+}
+ 
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+ 
+.job-title {
+  font-size: 18px;
+  margin: 0 0 2px;
+}
+ 
+.job-org {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+ 
+.job-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+}
+
+/* ============================================================
    DEPLOY GRID (PROJECTS)
    ============================================================ */
 .deploy-grid {
