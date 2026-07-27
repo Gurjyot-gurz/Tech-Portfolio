@@ -11,7 +11,7 @@ const TERMINAL_LINES = [
   'gurjyot-singh',
   '',
   '$ cat profile.yaml',
-  'role: Cloud Engineer / DevOps Engineer / Software Engineer (seeking)',
+  'role: Cloud and DevOps Engineer / Software Engineer / Data Analytics (seeking)',
   'focus: [Kubernetes, Docker, CI/CD, AWS, Azure]',
   'status: build passing \u2713'
 ];
