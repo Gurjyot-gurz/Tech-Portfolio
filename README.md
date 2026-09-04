@@ -8,7 +8,7 @@
 
 ## 🌐 Live Demo
 
-**Portfolio:** https://gurjyotsingh740-gk.github.io/Tech-Portfolio/
+**Portfolio:** [https://gurjyotsingh740-gk.github.io/Tech-Portfolio/](https://gurjyot-gurz.github.io/Tech-Portfolio/)
 
 ------------------------------------------------------------------------
 
