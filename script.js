@@ -297,18 +297,7 @@ async function loadContributions() {
 
 loadContributions();
 
-// ── FORM ──────────────────────────────────────
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.innerHTML = '<span>Sending...</span>';
-  setTimeout(() => {
-    btn.innerHTML = '<span>Sent ✓</span>';
-    document.getElementById('form-success').style.display = 'block';
-    e.target.reset();
-    setTimeout(() => { btn.innerHTML = '<span>Send Message →</span>'; }, 3000);
-  }, 1200);
-}
+
 
 // ── MOBILE MENU ───────────────────────────────
 document.getElementById('hamburger').addEventListener('click', () => {
