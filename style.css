@@ -287,7 +287,7 @@
 
   .hero-index {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 15px;
     letter-spacing: 0.2em;
     color: var(--muted);
     text-transform: uppercase;
@@ -339,7 +339,7 @@
 
   .hero-desc {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
     color: var(--muted);
     max-width: 320px;
@@ -447,6 +447,256 @@
       display: none;
     }
   }
+
+/* ── HERO CERTIFICATION ─────────────────────── */
+
+.hero-certification {
+  position: absolute;
+
+  right: 5%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: min(600px, 38vw);
+
+  z-index: 2;
+}
+
+
+/* Main certification card */
+.hero-cert-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 2.2rem;
+
+  padding: 1.75rem 2rem;
+
+  background: rgba(250, 247, 242, 0.78);
+
+  border: 1px solid var(--line);
+
+  backdrop-filter: blur(10px);
+
+  position: relative;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.hero-cert-badge:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(0, 71, 255, 0.35);
+
+  background: rgba(250, 247, 242, 0.94);
+}
+
+
+/* ── LARGE AWS BADGE ───────────────────────── */
+
+.hero-cert-image-wrap {
+  width: 220px;
+  height: 220px;
+
+  flex: 0 0 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--paper);
+
+  border: 1px solid var(--line);
+
+  overflow: hidden;
+}
+
+.hero-cert-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform 0.45s ease;
+}
+
+.hero-cert-badge:hover .hero-cert-image {
+  transform: scale(1.05);
+}
+
+
+/* ── CERTIFICATION TEXT ────────────────────── */
+
+.hero-cert-info {
+  min-width: 0;
+}
+
+.hero-cert-kicker {
+  font-family: var(--font-mono);
+
+  font-size: 11px;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: var(--accent);
+
+  margin-bottom: 1rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.65rem;
+}
+
+.hero-cert-kicker::before {
+  content: '';
+
+  width: 28px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+
+.hero-cert-title {
+  font-family: var(--font-display);
+
+  font-size: clamp(28px, 2.5vw, 42px);
+
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.035em;
+
+  color: var(--charcoal);
+}
+
+.hero-cert-title em {
+  font-family: var(--font-serif);
+
+  font-weight: 300;
+
+  font-style: italic;
+
+  color: var(--accent);
+}
+
+
+.hero-cert-meta {
+  margin-top: 1.5rem;
+
+  font-family: var(--font-mono);
+
+  font-size: 11px;
+
+  letter-spacing: 0.16em;
+
+  color: var(--muted);
+}
+
+
+/* ── CAPTION ───────────────────────────────── */
+
+.hero-cert-line {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--line);
+
+  margin-top: 1.2rem;
+}
+
+.hero-cert-caption {
+  margin-top: 0.9rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-family: var(--font-mono);
+
+  font-size: 15px;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.hero-cert-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 4px rgba(0, 71, 255, 0.08);
+}
+
+
+/* ── HERO CERTIFICATION MOBILE ─────────────── */
+
+@media (max-width: 768px) {
+
+  .hero-certification {
+    position: relative;
+
+    right: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 100%;
+
+    margin-top: 3rem;
+  }
+
+  .hero-cert-badge {
+    gap: 1rem;
+
+    padding: 1rem;
+  }
+
+  .hero-cert-image-wrap {
+    width: 115px;
+    height: 115px;
+
+    flex-basis: 115px;
+  }
+
+  .hero-cert-title {
+    font-size: 20px;
+  }
+
+  .hero-cert-kicker {
+    font-size: 9px;
+  }
+
+  .hero-cert-meta {
+    font-size: 8px;
+
+    margin-top: 0.8rem;
+  }
+
+}
 
   /* ── MARQUEE ───────────────────────────────── */
 
@@ -1088,7 +1338,7 @@
 
   .exp-desc {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.8;
     color: var(--muted);
   }
@@ -1204,6 +1454,7 @@
 .education-item {
   display: grid;
   grid-template-columns: 70px 1fr 280px;
+  font-size: 15px;
   gap: 2rem;
   align-items: center;
   padding: 2.5rem 0;
@@ -1236,20 +1487,20 @@
 
 .education-specialization {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent);
   margin-bottom: 0.75rem;
 }
 
 .education-institute {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
 }
 
 .education-meta {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.9;
   text-align: right;
   color: var(--muted);
