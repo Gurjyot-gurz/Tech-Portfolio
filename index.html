@@ -1092,30 +1092,82 @@
 
       <div class="contact-form-wrap reveal">
         <div class="section-label">Send A Message</div>
-        <form onsubmit="handleFormSubmit(event)" style="margin-top:2rem;">
-          <div class="form-row">
-            <label class="form-label" for="fname">Your Name</label>
-            <input type="text" id="fname" class="form-input" placeholder="John Doe" required />
-          </div>
-          <div class="form-row">
-            <label class="form-label" for="femail">Email Address</label>
-            <input type="email" id="femail" class="form-input" placeholder="john@example.com" required />
-          </div>
-          <div class="form-row">
-            <label class="form-label" for="fsubject">Subject</label>
-            <input type="text" id="fsubject" class="form-input" placeholder="Project Inquiry" />
-          </div>
-          <div class="form-row">
-            <label class="form-label" for="fmsg">Message</label>
-            <textarea id="fmsg" class="form-textarea" rows="4" placeholder="Tell me about your project..."
-              required></textarea>
-          </div>
-          <button type="submit" class="form-submit"><span>Send Message →</span></button>
-          <div id="form-success"
-            style="display:none; font-family:var(--font-mono);font-size:12px;color:green;margin-top:1rem;letter-spacing:0.05em;">
-            ✓ Message sent! I'll get back to you soon.
-          </div>
-        </form>
+        <form id="contact-form" style="margin-top:2rem;">
+
+  <div class="form-row">
+    <label class="form-label" for="fname">Your Name</label>
+    <input
+      type="text"
+      id="fname"
+      name="name"
+      class="form-input"
+      placeholder="John Doe"
+      data-fs-field
+      required
+    />
+  </div>
+
+  <div class="form-row">
+    <label class="form-label" for="femail">Email Address</label>
+    <input
+      type="email"
+      id="femail"
+      name="email"
+      class="form-input"
+      placeholder="john@example.com"
+      data-fs-field
+      required
+    />
+  </div>
+
+  <div class="form-row">
+    <label class="form-label" for="fsubject">Subject</label>
+    <input
+      type="text"
+      id="fsubject"
+      name="subject"
+      class="form-input"
+      placeholder="Project Inquiry"
+      data-fs-field
+    />
+  </div>
+
+  <div class="form-row">
+    <label class="form-label" for="fmsg">Message</label>
+    <textarea
+      id="fmsg"
+      name="message"
+      class="form-textarea"
+      rows="4"
+      placeholder="Tell me about your project..."
+      data-fs-field
+      required
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="form-submit"
+    data-fs-submit-btn
+  >
+    <span>Send Message →</span>
+  </button>
+
+  <div
+    data-fs-success
+    style="display:none; font-family:var(--font-mono);font-size:12px;color:green;margin-top:1rem;letter-spacing:0.05em;"
+  >
+    ✓ Message sent successfully! I'll get back to you soon.
+  </div>
+
+  <div
+    data-fs-error
+    style="display:none; font-family:var(--font-mono);font-size:12px;color:#c0392b;margin-top:1rem;letter-spacing:0.05em;"
+  >
+    Something went wrong. Please try again.
+  </div>
+
+</form>
       </div>
     </div>
   </section>
@@ -1128,5 +1180,21 @@
   </footer>
 
   <script src="script.js"></script>
+
+<script>
+  window.formspree =
+    window.formspree ||
+    function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+
+  formspree('initForm', {
+    formElement: '#contact-form',
+    formId: 'xaenkzjo'
+  });
+</script>
+
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
 </body>
 </html>
