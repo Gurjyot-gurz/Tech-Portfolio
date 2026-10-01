@@ -1116,6 +1116,160 @@
     }
   }
 
+  /* ── EDUCATION ───────────────────────────────── */
+
+#education {
+  padding: 8rem 3rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--ivory);
+}
+
+.education-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.education-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--charcoal);
+}
+
+.education-title em {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.education-desc {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.education-list {
+  border-top: 1px solid var(--line);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 280px;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding-left 0.25s ease;
+}
+
+.education-item:hover {
+  padding-left: 1rem;
+}
+
+.education-number {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+.education-main {
+  min-width: 0;
+}
+
+.education-degree {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.4rem;
+}
+
+.education-specialization {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.education-institute {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.education-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.9;
+  text-align: right;
+  color: var(--muted);
+}
+
+.education-date {
+  color: var(--charcoal);
+}
+
+.education-cgpa strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+
+  #experience {
+    padding: 4rem 1.5rem;
+  }
+
+  .exp-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .exp-big-text {
+    font-size: clamp(42px, 12vw, 64px);
+  }
+
+  #education {
+    padding: 4rem 1.5rem;
+  }
+
+  .education-header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .education-title {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+
+  .education-item {
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .education-meta {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .education-degree {
+    font-size: 18px;
+  }
+
+}
+
   /* ── GITHUB ──────────────────────────────────── */
   #github-section {
     padding: 6rem 3rem;
