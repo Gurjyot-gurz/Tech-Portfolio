@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;1,9..144,300&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-name" id="loader-name">Gurjyot Singh<span style="color:var(--accent)">.</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-counter" id="loader-counter">000</div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="30" height="30" rx="4" fill="var(--charcoal)" stroke="var(--accent)"
+        stroke-width="1.5" />
+      <text x="6" y="22" font-family="monospace" font-size="14" fill="var(--accent)" font-weight="bold">&lt;/&gt;</text>
+    </svg>
+  </div>
+
+  <!-- PROJECT HOVER IMAGE -->
+  <div id="proj-hover-img"><img src="" alt="" id="proj-hover-src" /></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Gurjyot Singh</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:sgurjyot740@gmail.com" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="mailto:sgurjyot740@gmail.com">Hire Me →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-number" aria-hidden="true">01</div>
+
+    <div class="hero-index reveal">
+      <span>Cloud & DevOps Engineer</span>
+      <span>&amp; AWS Infrastructure & Automation</span>
+    </div>
+
+    <h1 class="hero-title">
+      <div class="hero-title-line"><span class="title-line block">Gurjyot</span></div>
+      <div class="hero-title-line"><span class="title-line block"><em class="serif-word">Singh</em></span></div>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <div>
+        <div class="hero-desc">
+          Building reliable cloud infrastructure<br>
+          with automation, containers & CI/CD.<br>
+          <strong style="color:var(--charcoal)">AWS, DevOps & Cloud Automation.</strong>
+        </div>
+        <div class="hero-availability" style="margin-top:1.5rem; display:inline-flex;">
+          <div class="hero-dot"></div>
+          Available for Cloud & DevOps Opportunities
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack">
+
+    <!-- SET 1 -->
+    <div class="marquee-item">
+      <img src="Icons/AWS_Icon.png" alt="AWS">
+      <span>AWS</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Docker_Icon.png" alt="Docker">
+      <span>Docker</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/K8s_Icon.png" alt="Kubernetes">
+      <span>Kubernetes</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/GitHub_Icon.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Linux_Icon.png" alt="Linux">
+      <span>Linux</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Python_Icon.png" alt="Python">
+      <span>Python</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+
+    <!-- SET 2 — exact duplicate for seamless loop -->
+
+    <div class="marquee-item">
+      <img src="Icons/AWS_Icon.png" alt="AWS">
+      <span>AWS</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Docker_Icon.png" alt="Docker">
+      <span>Docker</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/K8s_Icon.png" alt="Kubernetes">
+      <span>Kubernetes</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/GitHub_Icon.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Linux_Icon.png" alt="Linux">
+      <span>Linux</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Python_Icon.png" alt="Python">
+      <span>Python</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <!-- SET - 3 -->
+     <div class="marquee-item">
+      <img src="Icons/AWS_Icon.png" alt="AWS">
+      <span>AWS</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Docker_Icon.png" alt="Docker">
+      <span>Docker</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/K8s_Icon.png" alt="Kubernetes">
+      <span>Kubernetes</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/GitHub_Icon.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Linux_Icon.png" alt="Linux">
+      <span>Linux</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Python_Icon.png" alt="Python">
+      <span>Python</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <!-- SET - 4 -->
+     <div class="marquee-item">
+      <img src="Icons/AWS_Icon.png" alt="AWS">
+      <span>AWS</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Docker_Icon.png" alt="Docker">
+      <span>Docker</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/K8s_Icon.png" alt="Kubernetes">
+      <span>Kubernetes</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/GitHub_Icon.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Linux_Icon.png" alt="Linux">
+      <span>Linux</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Python_Icon.png" alt="Python">
+      <span>Python</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+  <!-- SET - 5 -->
+   <div class="marquee-item">
+      <img src="Icons/AWS_Icon.png" alt="AWS">
+      <span>AWS</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Docker_Icon.png" alt="Docker">
+      <span>Docker</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/K8s_Icon.png" alt="Kubernetes">
+      <span>Kubernetes</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/GitHub_Icon.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Linux_Icon.png" alt="Linux">
+      <span>Linux</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+    <div class="marquee-item">
+      <img src="Icons/Python_Icon.png" alt="Python">
+      <span>Python</span>
+    </div>
+
+    <span class="marquee-sep">✦</span>
+
+  </div>
+</div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div>
+      <div class="section-label reveal">About Me</div>
+      <h2 class="about-title reveal">
+        Building<br>
+        <em>reliable</em><br>
+        cloud infrastructure
+      </h2>
+      <p class="about-text reveal">
+        I'm Gurjyot Singh — a Cloud & DevOps Engineer focused on building reliable cloud infrastructure, serverless workflows, and containerized applications. I work with AWS, Docker, Kubernetes, Terraform, and CI/CD to automate deployments and build scalable systems.
+      </p>
+      <div class="about-stats reveal">
+        <div class="stat-box">
+          <div class="stat-num" data-count="7">7+</div>
+          <div class="stat-label">Projects Shipped</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="10">10+</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="5">5+</div>
+          <div class="stat-label">Automation Tools</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="3">3+</div>
+          <div class="stat-label">Observability Tools</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="skills-group">
+        <div class="skills-group-title">Cloud</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>AWS</span></div>
+          <div class="skill-tag"><span>Azure</span></div>
+          <div class="skill-tag"><span>EC2</span></div>
+          <div class="skill-tag"><span>S3</span></div>
+          <div class="skill-tag"><span>Lambda</span></div>
+          <div class="skill-tag"><span>VPC</span></div>
+          <div class="skill-tag"><span>CloudFront</span></div>
+          <div class="skill-tag"><span>StepFunctions</span></div>
+          <div class="skill-tag"><span>EventBridge</span></div>
+          <div class="skill-tag"><span>SNS</span></div>
+          <div class="skill-tag"><span>DynamoDB</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">DevOps & CI/CD</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Docker</span></div>
+          <div class="skill-tag"><span>Kubernetes</span></div>
+          <div class="skill-tag"><span>Terraform</span></div>
+          <div class="skill-tag"><span>CloudFormation</span></div>
+          <div class="skill-tag"><span>Ansible</span></div>
+          <div class="skill-tag"><span>Jenkins</span></div>
+          <div class="skill-tag"><span>GitHub Actions</span></div>
+          <div class="skill-tag"><span>Docker Hub</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Monitoring & Data</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>CloudWatch</span></div>
+          <div class="skill-tag"><span>Prometheus</span></div>
+          <div class="skill-tag"><span>Grafana</span></div>
+          <div class="skill-tag"><span>Python</span></div>
+          <div class="skill-tag"><span>MySQL</span></div>
+          <div class="skill-tag"><span>MongoDB</span></div>
+          <div class="skill-tag"><span>DynamoDB</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Tools & OS</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Linux</span></div>
+          <div class="skill-tag"><span>Git</span></div>
+          <div class="skill-tag"><span>AWS CLI</span></div>
+          <div class="skill-tag"><span>Bash</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-label">Selected Work</div>
+        <div class="projects-title">Projects<br><span
+            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">&amp; Case
+            Studies</span></div>
+      </div>
+      <div class="projects-count reveal">07 Projects</div>
+    </div>
+
+    <div id="project-list">
+      <div class="project-item reveal" data-img="Project_Shot/Serverless_Image.png">
+        <div class="project-num">01</div>
+        <div>
+          <div class="project-name">Serverless Identity Verification & Image Processing Pipeline</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Event-driven serverless image processing and identity verification workflow</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Step Functions</span>
+          <span class="tech-badge">Lambda</span>
+          <span class="tech-badge">S3</span>
+          <span class="tech-badge">DynamoDB</span>
+          <span class="tech-badge">Rekognition</span>
+          <span class="tech-badge">SNS</span>
+          <span class="tech-badge">CloudFormation</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/aws-stepfunctions-image-assembly" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal" data-img="Project_Shot/Multi-Zone_Web_Architect.png">
+        <div class="project-num">02</div>
+        <div>
+          <div class="project-name">Containerized Multi-Zone Web Architecture Platform</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Containerized Flask application with load balancing, Auto Scaling and monitoring</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Python Flask</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Elastic Beanstalk</span>
+          <span class="tech-badge">ALB</span>
+          <span class="tech-badge">EC2</span>
+          <span class="tech-badge">Auto Scaling</span>
+          <span class="tech-badge">CloudWatch</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/elastic-beanstalk-containerized-app" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal" data-img="Project_Shot/Static_Secured_Serverless.png">
+        <div class="project-num">03</div>
+        <div>
+          <div class="project-name">Secure Serverless Web Delivery Platform</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Globally accelerated static website secured with CloudFront and Lambda@Edge</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">S3</span>
+          <span class="tech-badge">CloudFront</span>
+          <span class="tech-badge">Lambda@Edge</span>
+          <span class="tech-badge">IAM</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/aws-edge-secured-static-site" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="Project_Shot/AutoScale_Shop.png">
+        <div class="project-num">04</div>
+        <div>
+          <div class="project-name">Autoscale Shop</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Containerized microservices e-commerce platform with Kubernetes autoscaling</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Python Flask Microservices</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Kubernetes(Minikube)</span>
+          <span class="tech-badge">HPA</span>
+          <span class="tech-badge">Prometheus</span>
+          <span class="tech-badge">Grafana</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/autoscale-shop" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="Project_Shot/Snapshift.png">
+        <div class="project-num">05</div>
+        <div>
+          <div class="project-name">SnapShift</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">ESP32-powered gesture-based wireless file transfer system using Wi-Fi networking</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">ESP32</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Wi-Fi</span>
+          <span class="tech-badge">UDP Gesture Tracking</span>
+          <span class="tech-badge">TCP File Transfer</span>
+          <span class="tech-badge">PyGame</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/Snapshift-IoT-Major" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="Project_Shot/Voting_App.jpg">
+        <div class="project-num">06</div>
+        <div>
+          <div class="project-name">Online Voting System</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Flutter voting application with OTP authentication and real-time election results</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Flutter/Dart</span>
+          <span class="tech-badge">OTP Firebase OAuth</span>
+          <span class="tech-badge">Shared Preferences</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/Online-Voting-System" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+
+      <div class="project-item reveal"
+        data-img="Project_Shot/AI_Desktop_Assistant.png">
+        <div class="project-num">07</div>
+        <div>
+          <div class="project-name">AI Desktop Assistant</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Python desktop assistant with Gemini AI, voice interaction and image generation</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Gemini AI</span>
+          <span class="tech-badge">PyQt 5</span>
+          <span class="tech-badge">Speech Recognition</span>
+          <span class="tech-badge">Image Generation Model</span>
+        </div>
+        <a href="https://github.com/Gurjyot-gurz/AI-Desktop-Assistant-with-GUI" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-header">
+      <div>
+        <div class="section-label reveal">Visual Gallery</div>
+        <h2 class="gallery-title reveal">Certifications<br><span
+            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">& Credentials</span>
+        </h2>
+      </div>
+      <p class="gallery-desc reveal">
+        A curated collection of certifications and credentials earned across cloud,
+  DevOps, AI, and emerging technologies through continuous learning and hands-on practice.
+      </p>
+    </div>
+
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="aws">AWS</button>
+      <button class="filter-btn" data-filter="corizo">Corizo</button>
+      <button class="filter-btn" data-filter="coursera">Coursera</button>
+      <button class="filter-btn" data-filter="udemy">Udemy</button>
+      <button class="filter-btn" data-filter="google">Google</button>
+      <button class="filter-btn" data-filter="linkedin">LinkedIn</button>
+      <button class="filter-btn" data-filter="redhat">RedHat</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item g1" data-cat="aws" data-link="https://cp.certmetrics.com/amazon/en/credentials/status/4254798">
+        <img src="Certificates/AWS/AWS Certified AI Practitioner certificate conv 0.png" alt="AWS Certified AI Practitioner Foundational"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">AWS Certified AI Practitioner Foundational</div>
+          <div class="gallery-item-cat">AWS · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g1" data-cat="aws" data-link="https://www.credly.com/earner/earned/badge/fa992033-e692-4544-a784-6b8c546863e5">
+        <img src="Certificates/AWS/aws-educate-introduction-to-generative-ai-training-.png" alt="AWS Academy Introduction to GenAI"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">AWS Academy Introduction to GenAI</div>
+          <div class="gallery-item-cat">AWS · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g2" data-cat="aws" data-link="https://www.credly.com/badges/cda0132a-fa88-4b08-9a6b-8320e6136448/linked_in?t=t262yd">
+        <img src="Certificates/AWS/AWS_Cloud_Foundations.png" alt="AWS Academy Cloud Foundations"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">AWS Academy Cloud Foundations</div>
+          <div class="gallery-item-cat">AWS · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g3" data-cat="corizo">
+        <img src="Certificates/Corizo/Corizo_AI_Internship.png" alt="AWS Academy Cloud Foundations"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">AWS Academy Cloud Foundations</div>
+        </div>
+      </div>
+      <div class="gallery-item g4" data-cat="corizo">
+        <img src="Certificates/Corizo/Corizo_Android_Internship.png" alt="Corizo Internship - Android Development"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Corizo Internship - Android Development</div>
+        </div>
+      </div>
+      <div class="gallery-item g5" data-cat="corizo" data-link="https://lnkd.in/p/dAidqbUT">
+        <img src="Certificates/Corizo/Corizo_CloudComputing_Internship.png" alt="Corizo Internship - Cloud Computing"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Corizo Internship - Cloud Computing</div>
+          <div class="gallery-item-cat">Corizo · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g6" data-cat="corizo" data-link="https://lnkd.in/p/dAidqbUT">
+        <img src="Certificates/Corizo/Corizo_WebDev_Internship.png" alt="Corizo Internship - Web Development"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Corizo Internship - Web Development</div>
+          <div class="gallery-item-cat">Corizo · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g7" data-cat="coursera" data-link="https://www.coursera.org/account/accomplishments/verify/3KI6WLBZ9ETO">
+        <img src="Certificates/Coursera/Coursera_AIandML.png" alt="Coursera - Foundations of AI and Machine Learning"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Coursera - Foundations of AI and Machine Learning</div>
+          <div class="gallery-item-cat">Coursera · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g8" data-cat="coursera" data-link="https://www.coursera.org/account/accomplishments/verify/Y5T2HC052M5A">
+        <img src="Certificates/Coursera/Coursera_Duke_Univ.png" alt="Coursera - Cloud Virtualization, Containers and APIs"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Coursera - Cloud Virtualization, Containers and APIs</div>
+          <div class="gallery-item-cat">Coursera · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="coursera" data-link="https://www.coursera.org/account/accomplishments/verify/WIRCNZHNANH0">
+        <img src="Certificates/Coursera/Coursera_Dynamic_Web.png" alt="Coursera - Dynamic Web Programming"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Coursera - Dynamic Web Programming</div>
+          <div class="gallery-item-cat">Coursera · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="coursera" data-link="https://www.coursera.org/account/accomplishments/verify/OWD2BGEA3JA2">
+        <img src="Certificates/Coursera/Coursera_ModelTraining.png" alt="Coursera - Model Training Course"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Coursera - Model Training Course</div>
+          <div class="gallery-item-cat">Coursera · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="coursera" data-link="https://www.coursera.org/account/accomplishments/verify/PPLU6DUB7AZN">
+        <img src="Certificates/Coursera/CourseraAIwithChatbots.png" alt="Coursera - Artificial Intelligence Usage in Chatbots"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Coursera - Artificial Intelligence Usage in Chatbots</div>
+          <div class="gallery-item-cat">Coursera · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="udemy" data-link="https://www.udemy.com/certificate/UC-d31c0431-472e-4de7-9962-088b226af8b8/">
+        <img src="Certificates/Udemy/Udemy_Certification_Complete conv 0.png" alt="Udemy - [NEW] Ultimate AWS Certified AI Practitioner AIF-C01"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Udemy - [NEW] Ultimate AWS Certified AI Practitioner AIF-C01</div>
+          <div class="gallery-item-cat">Udemy · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="google" data-link="https://www.credly.com/earner/earned/badge/8b45841e-5ce6-4fd3-ab21-88ec4e6cae27">
+        <img src="Certificates/Google/google-cloud-computing-foundations-certificate.png" alt="Google - Cloud Computing Foundations"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Google - Cloud Computing Foundations</div>
+          <div class="gallery-item-cat">Google · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="linkedin" data-link="https://www.linkedin.com/learning/certificates/5f9f7a973c30c887391eebcf62e6fc732ad3c656c88ef80ba6a81735eaf49b4c">
+        <img src="Certificates/Linkedin/AIPairProgramming.png" alt="LinkedIn - AI Pair Programming on GitHub"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">LinkedIn - AI Pair Programming on GitHub</div>
+          <div class="gallery-item-cat">LinkedIn · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="linkedin" data-link="https://www.linkedin.com/learning/certificates/e9d6324db606a7afb1b22ca42e38faa2d822777831c16664b24ee580e8d6adac">
+        <img src="Certificates/Linkedin/DockerFoundations.png" alt="LinkedIn - Docker Foundations"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">LinkedIn - Docker Foundations</div>
+          <div class="gallery-item-cat">LinkedIn · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="linkedin" data-link="https://www.linkedin.com/learning/certificates/73ec05471aa8fd839a59854eac74e03586420b94289c87569407d028eab9c9cd">
+        <img src="Certificates/Linkedin/GitHub_Copilot_Prof.png" alt="LinkedIn - GitHub CoPilot Professional"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">LinkedIn - GitHub CoPilot Professional</div>
+          <div class="gallery-item-cat">LinkedIn · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="linkedin" data-link="https://www.linkedin.com/learning/certificates/7158bbf01bfd4d196777196afa0ab7ead37c460667f98310902dee83f21bd211">
+        <img src="Certificates/Linkedin/GitHubProfessionalCertificate.png" alt="LinkedIn - GitHub Professional Certificate"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">LinkedIn - GitHub Professional Certificate</div>
+          <div class="gallery-item-cat">LinkedIn · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="linkedin" data-link="https://www.linkedin.com/learning/certificates/c6180d2923fb8c4e715039fda02619857fae2f1c44fa504c908f7069e758a3f6">
+        <img src="Certificates/Linkedin/MicrosoftAzureAI.png" alt="LinkedIn Microsoft Azure AI"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">LinkedIn Microsoft Azure AI</div>
+          <div class="gallery-item-cat">LinkedIn · View Credential ↗</div>
+        </div>
+      </div>
+      <div class="gallery-item g9" data-cat="redhat" data-link="https://www.credly.com/badges/e28fe9af-b09a-4901-b8f4-99a79422f087">
+        <img src="Certificates/RedHat/RedHat_Ansible_Certificate_Conv.png" alt="Red Hat Enterprise Linux Automation with Ansible"
+          loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-item-title">Red Hat Enterprise Linux Automation with Ansible</div>
+          <div class="gallery-item-cat">RedHat · View Credential ↗</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label reveal">Experience &amp; Recognition</div>
+
+    <div class="exp-grid">
+      <div class="exp-timeline reveal">
+        <div class="exp-item">
+          <div class="exp-year">2024 — Present</div>
+          <div class="exp-role">Senior Frontend Developer</div>
+          <div class="exp-company">Tech Startup — Remote</div>
+          <div class="exp-desc">Leading frontend architecture for a SaaS platform serving 50K+ users. Built component
+            systems, reduced bundle size by 40%.</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2023 — 2024</div>
+          <div class="exp-role">Full Stack Developer</div>
+          <div class="exp-company">Digital Agency, Chennai</div>
+          <div class="exp-desc">Developed 12+ client projects across e-commerce, fintech, and media sectors. Delivered
+            under aggressive deadlines with 100% client retention.</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2022 — 2023</div>
+          <div class="exp-role">Junior Web Developer</div>
+          <div class="exp-company">Freelance</div>
+          <div class="exp-desc">Built responsive web apps for local businesses. Established client relationships that
+            led to 8 long-term contracts.</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2021 — 2022</div>
+          <div class="exp-role">UI/UX Intern</div>
+          <div class="exp-company">Design Studio, Coimbatore</div>
+          <div class="exp-desc">Designed wireframes and prototypes in Figma. Contributed to a design system used across
+            20+ products.</div>
+        </div>
+      </div>
+
+      <div class="exp-right reveal">
+        <div class="exp-big-text">
+          Building things<br>that <em>matter.</em>
+        </div>
+        <div class="section-label">Recognitions</div>
+        <ul class="awards-list">
+          <li class="award-item">
+            <div>
+              <div class="award-name">Best Developer Portfolio</div>
+              <div class="award-org">Awwwards Honorable Mention</div>
+            </div>
+            <div class="award-year">2024</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Hackathon Winner</div>
+              <div class="award-org">Smart India Hackathon</div>
+            </div>
+            <div class="award-year">2023</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Open Source Contributor</div>
+              <div class="award-org">GitHub Arctic Vault Program</div>
+            </div>
+            <div class="award-year">2023</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Top 5% Developer</div>
+              <div class="award-org">Stack Overflow Dev Survey</div>
+            </div>
+            <div class="award-year">2022</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB SECTION -->
+  <section id="github-section">
+    <div class="github-inner">
+      <div class="reveal">
+        <div class="section-label" style="color:rgba(245,240,232,0.4);">Open Source</div>
+        <h2 class="github-title">Code I've<br>put into <em>the world.</em></h2>
+        <p class="github-desc">Every commit tells a story. Every repo is a conversation. I believe in building in public
+          and contributing to the ecosystem that built me.</p>
+        <a href="https://github.com" target="_blank" class="github-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View GitHub Profile
+        </a>
+      </div>
+
+      <div class="reveal">
+        <div id="github-stats">
+          <div class="gh-stat">
+            <div class="gh-num" id="ghRepos">—</div>
+            <div class="gh-label">Repositories</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-num" id="ghStars">—</div>
+            <div class="gh-label">Stars Earned</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-num" id="ghFollowers">—</div>
+            <div class="gh-label">Followers</div>
+          </div>
+          <div class="gh-stat">
+  <div class="gh-num" id="ghContributions">—</div>
+  <div class="gh-label">Contributions</div>
+</div>
+        </div>
+
+        <div class="contribution-grid" id="contribGrid">
+  <!-- generated from contribution.json -->
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label reveal">Get In Touch</div>
+        <div class="contact-big reveal">
+          Let's<br>
+          <em>build</em><br>
+          together.
+        </div>
+        <p class="contact-sub reveal">
+          Whether you have a project in mind, want to collaborate, or just want to say hello — I'm always up for a good
+          conversation.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:sgurjyot740@gmail.com" class="contact-link">
+            <div>
+              <div class="contact-link-name">Email</div>
+              <div class="contact-link-handle">sgurjyot740@gmail.com</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">GitHub</div>
+              <div class="contact-link-handle">github.com/Gurjyot-gurz</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">LinkedIn</div>
+              <div class="contact-link-handle">linkedin.com/in/gurjyot-singh-gurz</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <div class="section-label">Send A Message</div>
+        <form onsubmit="handleFormSubmit(event)" style="margin-top:2rem;">
+          <div class="form-row">
+            <label class="form-label" for="fname">Your Name</label>
+            <input type="text" id="fname" class="form-input" placeholder="John Doe" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="femail">Email Address</label>
+            <input type="email" id="femail" class="form-input" placeholder="john@example.com" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="fsubject">Subject</label>
+            <input type="text" id="fsubject" class="form-input" placeholder="Project Inquiry" />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="fmsg">Message</label>
+            <textarea id="fmsg" class="form-textarea" rows="4" placeholder="Tell me about your project..."
+              required></textarea>
+          </div>
+          <button type="submit" class="form-submit"><span>Send Message →</span></button>
+          <div id="form-success"
+            style="display:none; font-family:var(--font-mono);font-size:12px;color:green;margin-top:1rem;letter-spacing:0.05em;">
+            ✓ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© 2025 Gurjyot Singh All rights reserved.</div>
+    <div class="footer-logo">GurjyotSingh</div>
+    <div class="footer-right">Built with <span style="color:var(--accent)">♥</span> from Space</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

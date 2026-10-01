@@ -1,0 +1,111 @@
+name: Update GitHub Contributions
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+
+      - name: Fetch GitHub contribution calendar
+        env:
+          GH_CONTRIBUTION_TOKEN: ${{ secrets.GH_CONTRIBUTION_TOKEN }}
+
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+          from datetime import datetime, timedelta, timezone
+
+          username = "Gurjyot-gurz"
+
+          today = datetime.now(timezone.utc)
+          start = today - timedelta(days=365)
+
+          query = """
+          query($login: String!, $from: DateTime!, $to: DateTime!) {
+            user(login: $login) {
+              contributionsCollection(from: $from, to: $to) {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      date
+                      contributionCount
+                      contributionLevel
+                      color
+                      weekday
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
+
+          payload = json.dumps({
+              "query": query,
+              "variables": {
+                  "login": username,
+                  "from": start.isoformat(),
+                  "to": today.isoformat()
+              }
+          }).encode("utf-8")
+
+          request = urllib.request.Request(
+              "https://api.github.com/graphql",
+              data=payload,
+              headers={
+                  "Authorization": f"Bearer {os.environ['GH_CONTRIBUTION_TOKEN']}",
+                  "Content-Type": "application/json",
+                  "User-Agent": "Gurjyot-Portfolio"
+              },
+              method="POST"
+          )
+
+          with urllib.request.urlopen(request) as response:
+              result = json.loads(response.read().decode("utf-8"))
+
+          if "errors" in result:
+              print(json.dumps(result["errors"], indent=2))
+              raise SystemExit("GitHub GraphQL request failed")
+
+          calendar = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+
+          output = {
+              "generatedAt": today.isoformat(),
+              "username": username,
+              "totalContributions": calendar["totalContributions"],
+              "weeks": calendar["weeks"]
+          }
+
+          with open("contribution.json", "w", encoding="utf-8") as file:
+              json.dump(output, file, indent=2)
+
+          print(
+              f"Updated contribution calendar for {username}: "
+              f"{calendar['totalContributions']} contributions"
+          )
+          PY
+
+      - name: Commit updated contribution data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add contribution.json
+
+          git diff --cached --quiet || git commit -m "chore: update GitHub contribution graph"
+
+          git push
