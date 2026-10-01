@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout portfolio
         uses: actions/checkout@v4
 
@@ -75,13 +76,19 @@ jobs:
           )
 
           with urllib.request.urlopen(request) as response:
-              result = json.loads(response.read().decode("utf-8"))
+              result = json.loads(
+                  response.read().decode("utf-8")
+              )
 
           if "errors" in result:
               print(json.dumps(result["errors"], indent=2))
               raise SystemExit("GitHub GraphQL request failed")
 
-          calendar = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+          calendar = (
+              result["data"]["user"]
+              ["contributionsCollection"]
+              ["contributionCalendar"]
+          )
 
           output = {
               "generatedAt": today.isoformat(),
@@ -90,7 +97,11 @@ jobs:
               "weeks": calendar["weeks"]
           }
 
-          with open("contribution.json", "w", encoding="utf-8") as file:
+          with open(
+              "contribution.json",
+              "w",
+              encoding="utf-8"
+          ) as file:
               json.dump(output, file, indent=2)
 
           print(
@@ -100,12 +111,23 @@ jobs:
           PY
 
       - name: Commit updated contribution data
+        env:
+          GH_TOKEN: ${{ secrets.GH_CONTRIBUTION_TOKEN }}
+
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add contribution.json
 
-          git diff --cached --quiet || git commit -m "chore: update GitHub contribution graph"
+          if git diff --cached --quiet; then
+            echo "No contribution changes."
+            exit 0
+          fi
+
+          git commit -m "chore: update GitHub contribution graph"
+
+          git remote set-url origin \
+            "https://x-access-token:${GH_TOKEN}@github.com/Gurjyot-gurz/Tech-Portfolio.git"
 
           git push
