@@ -160,6 +160,38 @@ document.querySelectorAll('.project-item[data-img]').forEach(item => {
   });
 });
 
+/* ═══════════════════════════════════════════════════════════════
+   FAQ ACCORDION
+   ═══════════════════════════════════════════════════════════════ */
+
+document.querySelectorAll('.faq-question').forEach((question) => {
+
+  question.addEventListener('click', () => {
+
+    const item = question.closest('.faq-item');
+    const isOpen = item.classList.contains('active');
+
+    // Close all other questions
+    document.querySelectorAll('.faq-item.active').forEach((openItem) => {
+      if (openItem !== item) {
+        openItem.classList.remove('active');
+
+        const openButton = openItem.querySelector('.faq-question');
+        openButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Toggle current question
+    item.classList.toggle('active');
+
+    question.setAttribute(
+      'aria-expanded',
+      !isOpen ? 'true' : 'false'
+    );
+  });
+
+});
+
 // ── GITHUB API ────────────────────────────────
 async function fetchGitHub() {
   try {
