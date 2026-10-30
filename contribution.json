@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T12:55:48.082718+00:00",
+  "generatedAt": "2026-10-30T22:20:07.700987+00:00",
   "username": "Gurjyot-gurz",
   "totalContributions": 227,
   "weeks": [
@@ -1200,7 +1200,7 @@
           "date": "2026-04-05",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 0
         },
         {
@@ -1242,7 +1242,7 @@
           "date": "2026-04-11",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 6
         }
       ]
@@ -1253,21 +1253,21 @@
           "date": "2026-04-12",
           "contributionCount": 9,
           "contributionLevel": "THIRD_QUARTILE",
-          "color": "#30a14e",
+          "color": "#fe9600",
           "weekday": 0
         },
         {
           "date": "2026-04-13",
           "contributionCount": 2,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 1
         },
         {
           "date": "2026-04-14",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 2
         },
         {
@@ -1313,7 +1313,7 @@
           "date": "2026-04-20",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 1
         },
         {
@@ -1334,14 +1334,14 @@
           "date": "2026-04-23",
           "contributionCount": 4,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 4
         },
         {
           "date": "2026-04-24",
           "contributionCount": 3,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 5
         },
         {
@@ -1486,7 +1486,7 @@
           "date": "2026-05-13",
           "contributionCount": 3,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 3
         },
         {
@@ -1772,7 +1772,7 @@
           "date": "2026-06-20",
           "contributionCount": 5,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 6
         }
       ]
@@ -1783,7 +1783,7 @@
           "date": "2026-06-21",
           "contributionCount": 12,
           "contributionLevel": "FOURTH_QUARTILE",
-          "color": "#216e39",
+          "color": "#03001c",
           "weekday": 0
         },
         {
@@ -1797,28 +1797,28 @@
           "date": "2026-06-23",
           "contributionCount": 45,
           "contributionLevel": "FOURTH_QUARTILE",
-          "color": "#216e39",
+          "color": "#03001c",
           "weekday": 2
         },
         {
           "date": "2026-06-24",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 3
         },
         {
           "date": "2026-06-25",
           "contributionCount": 3,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 4
         },
         {
           "date": "2026-06-26",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 5
         },
         {
@@ -1910,14 +1910,14 @@
           "date": "2026-07-08",
           "contributionCount": 7,
           "contributionLevel": "THIRD_QUARTILE",
-          "color": "#30a14e",
+          "color": "#fe9600",
           "weekday": 3
         },
         {
           "date": "2026-07-09",
           "contributionCount": 10,
           "contributionLevel": "FOURTH_QUARTILE",
-          "color": "#216e39",
+          "color": "#03001c",
           "weekday": 4
         },
         {
@@ -2037,7 +2037,7 @@
           "date": "2026-07-25",
           "contributionCount": 2,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 6
         }
       ]
@@ -2055,7 +2055,7 @@
           "date": "2026-07-27",
           "contributionCount": 2,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 1
         },
         {
@@ -2267,7 +2267,7 @@
           "date": "2026-08-24",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 1
         },
         {
@@ -2302,7 +2302,7 @@
           "date": "2026-08-29",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 6
         }
       ]
@@ -2348,7 +2348,7 @@
           "date": "2026-09-04",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 5
         },
         {
@@ -2394,21 +2394,21 @@
           "date": "2026-09-10",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 4
         },
         {
           "date": "2026-09-11",
           "contributionCount": 3,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 5
         },
         {
           "date": "2026-09-12",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 6
         }
       ]
@@ -2419,49 +2419,49 @@
           "date": "2026-09-13",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 0
         },
         {
           "date": "2026-09-14",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 1
         },
         {
           "date": "2026-09-15",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 2
         },
         {
           "date": "2026-09-16",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 3
         },
         {
           "date": "2026-09-17",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 4
         },
         {
           "date": "2026-09-18",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 5
         },
         {
           "date": "2026-09-19",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 6
         }
       ]
@@ -2472,21 +2472,21 @@
           "date": "2026-09-20",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 0
         },
         {
           "date": "2026-09-21",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 1
         },
         {
           "date": "2026-09-22",
           "contributionCount": 5,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 2
         },
         {
@@ -2539,21 +2539,21 @@
           "date": "2026-09-29",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 2
         },
         {
           "date": "2026-09-30",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 3
         },
         {
           "date": "2026-10-01",
           "contributionCount": 21,
           "contributionLevel": "FOURTH_QUARTILE",
-          "color": "#216e39",
+          "color": "#03001c",
           "weekday": 4
         },
         {
@@ -2567,7 +2567,7 @@
           "date": "2026-10-03",
           "contributionCount": 4,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 6
         }
       ]
@@ -2585,7 +2585,7 @@
           "date": "2026-10-05",
           "contributionCount": 8,
           "contributionLevel": "THIRD_QUARTILE",
-          "color": "#30a14e",
+          "color": "#fe9600",
           "weekday": 1
         },
         {
@@ -2606,21 +2606,21 @@
           "date": "2026-10-08",
           "contributionCount": 2,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 4
         },
         {
           "date": "2026-10-09",
           "contributionCount": 1,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 5
         },
         {
           "date": "2026-10-10",
           "contributionCount": 4,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 6
         }
       ]
@@ -2652,7 +2652,7 @@
           "date": "2026-10-14",
           "contributionCount": 2,
           "contributionLevel": "FIRST_QUARTILE",
-          "color": "#9be9a8",
+          "color": "#ffee4a",
           "weekday": 3
         },
         {
@@ -2666,14 +2666,14 @@
           "date": "2026-10-16",
           "contributionCount": 6,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 5
         },
         {
           "date": "2026-10-17",
           "contributionCount": 23,
           "contributionLevel": "FOURTH_QUARTILE",
-          "color": "#216e39",
+          "color": "#03001c",
           "weekday": 6
         }
       ]
@@ -2684,7 +2684,7 @@
           "date": "2026-10-18",
           "contributionCount": 7,
           "contributionLevel": "THIRD_QUARTILE",
-          "color": "#30a14e",
+          "color": "#fe9600",
           "weekday": 0
         },
         {
@@ -2712,7 +2712,7 @@
           "date": "2026-10-22",
           "contributionCount": 6,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 4
         },
         {
@@ -2751,7 +2751,7 @@
           "date": "2026-10-27",
           "contributionCount": 6,
           "contributionLevel": "SECOND_QUARTILE",
-          "color": "#40c463",
+          "color": "#ffc501",
           "weekday": 2
         },
         {
