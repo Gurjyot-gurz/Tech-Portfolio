@@ -4,5 +4,5 @@ compatibility_date = "2024-11-12"
 
 [[kv_namespaces]]
 binding = "VISITOR_KV"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id = "a3140ec0a8174fac8542dcedc7502c29"
 # preview_id = "REPLACE_WITH_YOUR_PREVIEW_KV_ID"  # optional for preview environment
