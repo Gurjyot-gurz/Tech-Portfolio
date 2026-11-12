@@ -329,6 +329,49 @@ async function loadContributions() {
 
 loadContributions();
 
+  // ── VISITOR COUNTER (Cloudflare Worker + KV) ────────
+  async function fetchVisitorCount() {
+    // Replace with your actual Worker URL after deployment
+    const WORKER_URL = 'https://tech-portfolio.robinhoodhudhud3.workers.dev/';
+
+    try {
+      const res = await fetch(WORKER_URL, { method: 'GET', credentials: 'omit' });
+      if (!res.ok) throw new Error('Worker error');
+      const data = await res.json();
+
+      const countEl = document.getElementById('visitorCount');
+      const locEl = document.getElementById('visitorLocation');
+
+      if (countEl) {
+        // Animate the count like other stats
+        const target = data.count || 0;
+        gsap.to({ val: 0 }, {
+          val: target,
+          duration: 1.5,
+          ease: 'power2.out',
+          onUpdate: function () {
+            countEl.textContent = Math.floor(this.targets()[0].val).toLocaleString() + '+';
+          }
+        });
+        countEl.dataset.count = target;
+      }
+
+      if (locEl && data.location) {
+        const loc = data.location;
+        locEl.textContent = `${loc.country || '—'}${loc.city ? ', ' + loc.city : ''}`;
+      }
+    } catch (e) {
+      console.warn('Visitor counter unavailable:', e);
+      const countEl = document.getElementById('visitorCount');
+      const locEl = document.getElementById('visitorLocation');
+      if (countEl) countEl.textContent = '—';
+      if (locEl) locEl.textContent = 'Counter unavailable';
+    }
+  }
+
+  // Fetch on page load (after loader finishes)
+  setTimeout(fetchVisitorCount, 500);
+
 
 
 // ── MOBILE MENU ───────────────────────────────

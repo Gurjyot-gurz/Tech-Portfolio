@@ -1624,7 +1624,7 @@
 
   #github-stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 1px;
     background: rgba(255, 255, 255, 0.06);
   }
@@ -1739,9 +1739,19 @@
       gap: 3rem;
     }
 
+    #github-stats {
+      grid-template-columns: 1fr 1fr;
+    }
+
     .contrib-cell {
       width: 8px;
       height: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #github-stats {
+      grid-template-columns: 1fr;
     }
   }
 
